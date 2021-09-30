@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pipex.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggrapefr <ggrapefr@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/29 18:37:47 by ggrapefr          #+#    #+#             */
+/*   Updated: 2021/09/30 19:14:50 by ggrapefr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/pipex.h"
 
 void	child_process(char **argv, char **envp, int *pipe_fd)
@@ -41,9 +53,7 @@ int	main(int argc, char **argv, char **envp)
 		if (pid1 == 0)
 			child_process(argv, envp, pipe_fd);
 		else
-		{
 			parent_process(argv, envp, pipe_fd);
-		}
 		close(pipe_fd[1]);
 		close(pipe_fd[0]);
 		waitpid(pid1, NULL, 0);
@@ -51,8 +61,7 @@ int	main(int argc, char **argv, char **envp)
 	}
 	else
 	{
-		ft_putstr_fd("\033[1:31mError: Bad arguments\n\e[0m", 2);
-		ft_putstr_fd("Ex: ./pipex file1 cmd1 cmd2 file2\n", 1);
+		ft_putstr_fd("Error: Wrong number of arguments\n", 2);
 		exit(EXIT_FAILURE);
 	}
 }

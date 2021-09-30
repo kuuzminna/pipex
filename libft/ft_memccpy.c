@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggrapefr <ggrapefr@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/29 18:39:39 by ggrapefr          #+#    #+#             */
+/*   Updated: 2021/09/29 18:39:41 by ggrapefr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src,
+void	*ft_memccpy(void *dst, const void *src,
 	int c, size_t n)
 {
 	unsigned char	*str1;

@@ -10,7 +10,8 @@ LIST =		ft_isalpha.c	ft_isdigit.c	ft_isalnum.c\
  			ft_memset.c		ft_calloc.c		ft_strrchr.c\
  			ft_strlcpy.c	ft_strlcat.c	ft_memcpy.c\
  			ft_memmove.c	ft_memchr.c		ft_memcmp.c\
- 			ft_memccpy.c
+ 			ft_memccpy.c	ft_strtrim.c	ft_strmapi.c\
+			ft_split.c
 OBJ = $(patsubst %.c,%.o,$(LIST))
 
 D_FILES = $(patsubst %.c,%.d,$(LIST))
@@ -24,7 +25,7 @@ $(NAME) : $(OBJ)
 	ar rcs $(NAME) $?
 
 %.o : %.c
-	gcc $(FLAGS) $(OPTFLAGS) -c $< -o $@ -MD
+	gcc $(FLAGS) $(OPTFLAGS) -c $< -o $@
 
 include $(wildcard $(D_FILES))
 
