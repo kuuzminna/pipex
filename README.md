@@ -1,2 +1,2 @@
 # pipex
-программа на вход принимает названия файлов и произвольные shell-команды, студент должен продемонстрировать умение работать с пайпами на системном уровне и реализовать функционал, идентичный штатному поведению системы в терминале.
+This project is the implementation of some part of the shell which can execute the piped commands and redirect to the file (STDIN, STDOUT).
